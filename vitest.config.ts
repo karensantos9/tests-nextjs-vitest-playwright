@@ -31,7 +31,7 @@ export default defineConfig({
 
     // Executado uma única vez antes (setup) e depois (tearDown) da suíte
     // inteira de testes
-    //globalSetup: ['vitest.global.setup.ts'],
+    globalSetup: ['vitest.global.setup.ts'],
 
     // Define quais arquivos serão considerados testes (unit e integration)
     // Testes de integração: .test.ts(x) | Testes Unitários: .spec.ts(x)
