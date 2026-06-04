@@ -4,12 +4,12 @@ import { makeNewTodo } from './make-new-todo';
 import { Todo } from '../schemas/todo.contract';
 //import { TodoPresenter } from '../schemas/todo.contract';
 
-type InvalidTodo = {
+export type InvalidTodo = {
     sucsses: false;
     error: string[]
 }
 
-type ValidaTodo = {
+export type ValidaTodo = {
     sucsses: true;
     data: Todo
 }
@@ -22,13 +22,13 @@ export function makeValidatedTodo(description: string): makeValidatedTodo {
 
   if (validatedDescription.success) {
     return {
-      success: true,
+      sucsses: true,
       todo: makeNewTodo(cleanDescription),
     };
   }
 
   return {
-    success: false,
-    errors: validatedDescription.errors,
+    sucsses: false,
+    error: validatedDescription.errors,
   };
 }
