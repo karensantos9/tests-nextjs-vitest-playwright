@@ -2,10 +2,11 @@ import { join } from 'path';
 
 const commonKeys = {
   drizzleSchemaFiles: [
-    join('src', 'core', 'todo', 'schemas', 'drizzle-todo-table.schema.ts'),
-  ],
+  './src/core/todo/schemas/drizzle-todo-table.schema.ts',
+],
   //gaurda as mudanças feita no banco, ex: criação de um outro campo
   drizzleMigrationsFolder: join('src', 'db', 'drizzle', 'migrations'),
+  
 };
 
 const envConfigs = {
