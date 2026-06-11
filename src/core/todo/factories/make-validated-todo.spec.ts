@@ -65,6 +65,7 @@ describe('makeValidatedTodo (unit)', () => {
       makeValidatedTodo(description) as ValidTodo;
 
     // Verifica se a operação foi bem sucedida
+    console.log(result);
     expect(result.success).toBe(true);
 
     // Verifica os dados retornados
